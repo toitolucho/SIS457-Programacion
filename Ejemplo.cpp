@@ -5,6 +5,7 @@
 #include "Pacman.h"
 #include "Jugador.h"
 #include <vector>
+#include <fstream>
 using namespace std;
 
 template <typename T>
@@ -130,7 +131,7 @@ int main()
     
     //aux.mostrar();
 
-    Jugador j1, j2("lola","femenino"), j3("fer","masculino",3000, 10, 1), j4, j5;
+    /*Jugador j1, j2("lola","femenino"), j3("fer","masculino",3000, 10, 1), j4, j5;
     j1.presentarDatos();
     j1.formatearTiempo(false);
 
@@ -143,9 +144,54 @@ int main()
 
     jugadores.pop_back();
     jugadores.pop_back();
-    imprimirElementos(jugadores);
+    imprimirElementos(jugadores);*/
 
+    ifstream cin2("lista.txt");
+    ofstream cout2("lista.txt", fstream::app);
+    
+    vector<Jugador> lista;
+    int conta = 0;
 
+    if (cin2.fail()) 
+    {
+        cout << "no se leyo el archivo";
+    }
+    else
+    {
+        string nombre, sexo, nivel;
+        string puntaje;  string tiempo;
+
+        while (cin2.peek() != EOF)
+        {
+            //string linea;
+            getline(cin2, nombre, ';');
+            getline(cin2, sexo, ';');
+            getline(cin2, puntaje, ';');
+            getline(cin2, tiempo, ';');
+            getline(cin2, nivel, ';');
+            /*cout << "Nombre :" << nombre << endl;
+            cout << "Sexo :" << sexo << endl;
+            cout << "Puntaje :" << puntaje << endl;
+            cout << "tiempo :" << tiempo << endl;
+            cout << "nivel :" << nivel << endl;*/
+            //string ni, string s, float t, int p, int niv)
+            Jugador j1(nombre, sexo, stof(tiempo), stoi(puntaje), stoi(nivel));
+            conta++;
+            lista.push_back(j1);
+
+        }
+        cout << lista.size();
+
+        lista[0].resaltarDatos();
+        lista[1].resaltarDatos();
+    }
+    
+    //cout2 << "Luis Antonio Molina Yampa;Masculino;505;2375;4"<<endl;
+    getchar();
+
+   
+
+    return 0;
 }
 
 
@@ -164,3 +210,4 @@ int main()
 //   4. Use the Error List window to view errors
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+

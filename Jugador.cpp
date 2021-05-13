@@ -18,7 +18,7 @@ Jugador::Jugador(string ni, string s)
 	sexo = s;
 	nivel = 1;
 }
-Jugador::Jugador(string ni, string s, float t, float p, int niv)
+Jugador::Jugador(string ni, string s, float t, int p, int niv)
 {
 	puntaje = p;
 	tiempo = t;

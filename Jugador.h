@@ -16,7 +16,7 @@ public:
 
 	Jugador();
 	Jugador(string ni, string s);
-	Jugador(string ni, string s, float t, float p, int niv);
+	Jugador(string ni, string s, float t, int p, int niv);
 
 	void presentarDatos();
 	void resaltarDatos();
