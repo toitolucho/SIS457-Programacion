@@ -3,7 +3,7 @@
 using namespace std;
 class Cliente
 {
-private:
+public:
 	int ci;
 	float temperatura;
 	
@@ -13,6 +13,9 @@ public:
 	string getNombreCompleto();
 	Cliente();
 	Cliente(int c, float t, string n, string ap);
+
+
+
 
 };
 
