@@ -2,10 +2,60 @@
 //
 
 #include <iostream>
+#include "Muro.h"
+using namespace std;
+//clases en c++
+//.cpp  -> tiene el codigo fuente, el funcionamiento de la clase
+//.h  -> firmar(funcionamiento) y los atributos de la clase (publico - interfaz)
+
+
+//
+//class Nombre_clase  //.h   ->header  
+//{
+//    //modificadores de acceso (Encapsulamiento)  ->muchos elementos van estar ocultos y otros
+//    // a disposicion del resto de objetos
+//    // private, pubic, protected
+//    //atributos y compartimiento
+//    //datos, variables
+//    //funciones
+//
+//
+//public:
+//    //declara variables publicas
+//    //definir funciones publicas
+//private :
+//    //declara variables ocultas
+//    //definir funciones ocultas para uso EXCLUSIVO de la clase
+//protected:
+//    //  .
+//    //  .
+//
+//
+//};
+//
+////compartamiento se lo define el archivo .cpp
+//NombreClase::funcion1()
+//{
+//
+//}
+//
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+  /*  int a, b, c;
+    cin >> a >> b;
+    c = a + b;
+    cout << c;*/
+
+    
+    Muro m1,m2('C'), m3('C',3,4);  //m1 -> tipo = 'c', posicion(10,15)
+    m3.dibujar();
+    
+    m3.desaparecer();
+    std::cout << "Hola Mundo Cruel!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

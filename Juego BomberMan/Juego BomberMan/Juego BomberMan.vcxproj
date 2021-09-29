@@ -140,6 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Juego BomberMan.cpp" />
+    <ClCompile Include="Muro.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Muro.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
