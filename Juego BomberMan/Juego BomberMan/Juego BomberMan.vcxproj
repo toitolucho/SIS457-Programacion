@@ -139,10 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bomba.cpp" />
+    <ClCompile Include="Bomberman.cpp" />
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Juego BomberMan.cpp" />
     <ClCompile Include="Muro.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bomba.h" />
+    <ClInclude Include="Bomberman.h" />
+    <ClInclude Include="GameManager.h" />
     <ClInclude Include="Muro.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
