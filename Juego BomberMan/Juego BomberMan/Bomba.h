@@ -1,16 +1,18 @@
 #pragma once
 #include "Muro.h"
+#include "GameObject.h"
 #include "Bomberman.h"
-class Bomba
+class Bomba : public GameObject
 {
-private:
-	Posicion posicion;
+private:	
 	int alcanze;
 	int tiempoDetonacion;
 
 	void dibujar();
 
 public :
+	char tipo; // 'N'->NORMAL, 'V'-> REPLICAS EN VERTICAL, 'H'-> REPLICAS EN HORIZANTAL
+	int nroReplicas = 0;
 	Bomba();
 	Bomba(float f, float c);
 	Bomba(float f, float c, int alc, int td);

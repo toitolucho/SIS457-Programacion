@@ -1,8 +1,11 @@
 // Juego BomberMan.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+#include <typeinfo>
 #include <iostream>
 #include "Muro.h"
+#include <vector>
+#include "GameObject.h"
+#include "Bomba.h"
 using namespace std;
 //clases en c++
 //.cpp  -> tiene el codigo fuente, el funcionamiento de la clase
@@ -41,6 +44,21 @@ using namespace std;
 //
 
 
+vector<GameObject*> detectarMurosExplotar(vector<vector<GameObject*>> escena, Bomba b)
+{
+    vector<GameObject*> listaAExplotar;
+    if (b.tipo == 'N')
+    {
+
+        //el elemento que esta arriba
+        if (typeid(escena[b.posicion.y-1][b.posicion.x]).name() == "Muro")
+        {
+            listaAExplotar.push_back(  escena[b.posicion.y - 1][b.posicion.x]);
+        }
+    }
+}
+
+
 
 int main()
 {
@@ -51,10 +69,60 @@ int main()
     cout << c;*/
 
     
-    Muro m1,m2('C'), m3('C',3,4);  //m1 -> tipo = 'c', posicion(10,15)
-    m3.dibujar();
+    //Muro m1,m2('C'), m3('C',3,4);  //m1 -> tipo = 'c', posicion(10,15)
+    //m3.dibujar();
     
-    m3.desaparecer();
+    //m3.desaparecer();
+
+    //Muro m1, m2, m3, m4, m5, m6, m7, m8, m9, m10;
+
+    //vector de  6*5 (6 filas y 5 columnas)
+    
+    vector<vector<GameObject*>> escena(5);
+    //primera fila
+    escena[0].push_back(new Muro('L', 0, 0));    
+    escena[0].push_back(new Muro('L', 1, 0));
+    escena[0].push_back(new Muro('L', 2, 0));
+    escena[0].push_back(new Muro('L', 3, 0));
+    escena[0].push_back(new Muro('L', 4, 0));
+    escena[0].push_back(new Muro('L', 5, 0));
+
+    //segunda fila    
+    escena[1].push_back(new Muro('L', 0, 1));
+    escena[1].push_back(new Muro('P', 1, 1));
+    escena[1].push_back(new Muro('L', 2, 1));
+    escena[1].push_back(new Muro('L', 3, 1));
+    escena[1].push_back(new Muro('P', 4, 1));
+    escena[1].push_back(new Muro('L', 5, 1));
+
+
+    //tercera fila
+    escena[2].push_back(new Muro('L', 0, 2));
+    escena[2].push_back(new Muro('P', 1, 2));
+    escena[2].push_back(new Muro('L', 2, 2));
+    escena[2].push_back(new Muro('L', 3, 2));
+    escena[2].push_back(new Muro('P', 4, 2));
+    escena[2].push_back(new Muro('L', 5, 2));
+
+
+    //CUARTA fila
+    escena[3].push_back(new Muro('L', 0, 3));
+    escena[3].push_back(new Muro('P', 1, 3));
+    escena[3].push_back(new Muro('P', 2, 3));
+    escena[3].push_back(new Muro('P', 3, 3));
+    escena[3].push_back(new Muro('P', 4, 3));
+    escena[3].push_back(new Muro('L', 5, 3));
+
+
+    Bomba b1;
+    vector<GameObject*> lista = detectarMurosExplotar(escena, b1);
+    for (auto it = lista.begin(); it != lista.end(); it++)
+    {
+        //lista.at
+       // cout << it->Posicion.x << " " << it->Posicion.y << endl;
+    }
+
+
     std::cout << "Hola Mundo Cruel!\n";
 }
 

@@ -1,11 +1,11 @@
 #pragma once
 #include "Muro.h"
 #include "GameManager.h"
-class Bomberman
+class Bomberman : public GameObject
 {
 
 private :
-	Posicion posicion;
+	
 	int NroBombasDisponibles;  //si es -1, las bombas son ilimitadas
 	
 	int direccion; // 1 ->arriba, 2->derecha, 3->Abajo, 4 -> izquierda

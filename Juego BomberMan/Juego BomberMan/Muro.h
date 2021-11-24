@@ -1,5 +1,5 @@
 #pragma once
-
+#include "GameObject.h"
 struct Posicion
 {
 	//tipo_dato nombre_variable;
@@ -8,12 +8,12 @@ struct Posicion
 };
 
 
-class Muro
+class Muro : public GameObject
 {
 private:
 	//atributos ocultos
-	Posicion posicion;
-	char tipo;  // 'L', 'C'
+	
+	char tipo;  // 'L'->ladrillo, 'C'->concreto, 'p'->PASILLO
 
 public:
 	//comportamiento public, visible

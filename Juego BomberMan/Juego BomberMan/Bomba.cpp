@@ -7,6 +7,8 @@ Bomba::Bomba()
 	posicion.y = 3;
 	alcanze = 1;
 	tiempoDetonacion = 1;
+	tipo = 'N';
+	nroReplicas = 0;
 }
 
 //Bomba b2(3, 2);
