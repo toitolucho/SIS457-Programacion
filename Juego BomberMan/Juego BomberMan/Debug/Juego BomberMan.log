@@ -1,4 +1,12 @@
-﻿  Juego BomberMan.cpp
+﻿  Bomba.cpp
+  Bomberman.cpp
+  GameManager.cpp
+  GameObject.cpp
+  Juego BomberMan.cpp
+C:\Users\LuisAntonioMolinaYam\source\repos\SIS457-Programacion\Juego BomberMan\Juego BomberMan\Juego BomberMan.cpp(58,39): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\LuisAntonioMolinaYam\source\repos\SIS457-Programacion\Juego BomberMan\Juego BomberMan\Juego BomberMan.cpp(58,53): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\LuisAntonioMolinaYam\source\repos\SIS457-Programacion\Juego BomberMan\Juego BomberMan\Juego BomberMan.cpp(60,60): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\LuisAntonioMolinaYam\source\repos\SIS457-Programacion\Juego BomberMan\Juego BomberMan\Juego BomberMan.cpp(60,75): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
   Muro.cpp
   Generating Code...
-  Juego BomberMan.vcxproj -> D:\Mis Documentos\Materias\SIS457\Proyectos Codigo\SIS457-Programacion\Juego BomberMan\Debug\Juego BomberMan.exe
+  Juego BomberMan.vcxproj -> C:\Users\LuisAntonioMolinaYam\Source\Repos\SIS457-Programacion\Juego BomberMan\Debug\Juego BomberMan.exe

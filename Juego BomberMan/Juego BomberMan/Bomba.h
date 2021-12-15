@@ -1,5 +1,4 @@
 #pragma once
-#include "Muro.h"
 #include "GameObject.h"
 #include "Bomberman.h"
 class Bomba : public GameObject

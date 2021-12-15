@@ -1,11 +1,6 @@
 #pragma once
 #include "GameObject.h"
-struct Posicion
-{
-	//tipo_dato nombre_variable;
-	float x;
-	float y;
-};
+
 
 
 class Muro : public GameObject

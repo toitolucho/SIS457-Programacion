@@ -1,5 +1,5 @@
 #pragma once
-#include "Muro.h"
+#include "GameObject.h"
 #include "GameManager.h"
 class Bomberman : public GameObject
 {

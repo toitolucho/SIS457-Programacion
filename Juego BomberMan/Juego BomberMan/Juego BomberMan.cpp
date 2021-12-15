@@ -1,10 +1,14 @@
 // Juego BomberMan.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+
+
+#include "GameObject.h"
+#include <vector>
 #include <typeinfo>
 #include <iostream>
+
 #include "Muro.h"
-#include <vector>
-#include "GameObject.h"
+
 #include "Bomba.h"
 using namespace std;
 //clases en c++
@@ -56,6 +60,7 @@ vector<GameObject*> detectarMurosExplotar(vector<vector<GameObject*>> escena, Bo
             listaAExplotar.push_back(  escena[b.posicion.y - 1][b.posicion.x]);
         }
     }
+    return listaAExplotar;
 }
 
 
@@ -118,12 +123,13 @@ int main()
     vector<GameObject*> lista = detectarMurosExplotar(escena, b1);
     for (auto it = lista.begin(); it != lista.end(); it++)
     {
+        //cout << it << endl;
         //lista.at
-       // cout << it->Posicion.x << " " << it->Posicion.y << endl;
-    }
+        ///cout <<(*it)->Posicion.x << " " << it->Posicion.y << endl;
+        cout << (*it)->posicion.x << " " << (*it)->posicion.y << endl;
 
 
-    std::cout << "Hola Mundo Cruel!\n";
+   // std::cout << "Hola Mundo Cruel!\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

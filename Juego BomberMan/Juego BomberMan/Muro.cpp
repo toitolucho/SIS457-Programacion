@@ -1,20 +1,21 @@
 #include "Muro.h"
 #include <iostream>
-using namespace std;
+
 
 void Muro::dibujar()
 {
 	if(tipo == 'C')
 	{
-		cout << "-----" << endl;
-		cout << "-   -" << endl;
-		cout << "-----" << endl;
+		
+		std::cout << "-----" << std::endl;
+		std::cout << "-   -" << std::endl;
+		std::cout << "-----" << std::endl;
 	}
 	if (tipo == 'L')
 	{
-		cout << "-----" << endl;
-		cout << "--|--" << endl;
-		cout << "-----" << endl;
+		std::cout << "-----" << std::endl;
+		std::cout << "--|--" << std::endl;
+		std::cout << "-----" << std::endl;
 	}
 
 }
@@ -22,7 +23,7 @@ void Muro::desaparecer()
 {
 	//CODIGO para borrar el objeto
 	//para la consola, sería limpiar la pantalla
-	cout << "Desaparecemos de la coordenada (" << posicion.x << "," << posicion.y << ")" << endl;
+	std::cout << "Desaparecemos de la coordenada (" << posicion.x << "," << posicion.y << ")" << std::endl;
 }
 
 //constructor que no recibe parametros,-> constructor por defecto
